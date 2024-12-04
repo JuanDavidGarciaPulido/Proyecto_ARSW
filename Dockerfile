@@ -5,13 +5,13 @@ FROM node:16
 WORKDIR /app
 
 # Copia los archivos de dependencias
-COPY backend/package.json backend/package-lock.json ./
+COPY package.json package-lock.json ./
 
 # Instala las dependencias
 RUN npm install
 
 # Copia el resto de los archivos del backend
-COPY backend/ .
+COPY .
 
 # Expone el puerto 8080
 EXPOSE 8080
