@@ -17,4 +17,5 @@ COPY . .
 EXPOSE 8080
 
 # Comando para ejecutar la aplicación
+CMD ["npm", "install"]
 CMD ["npm", "start"]
