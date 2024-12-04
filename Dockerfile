@@ -11,7 +11,7 @@ COPY package.json package-lock.json ./
 RUN npm install
 
 # Copia el resto de los archivos del backend
-COPY .
+COPY . .
 
 # Expone el puerto 8080
 EXPOSE 8080
