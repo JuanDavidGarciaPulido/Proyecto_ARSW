@@ -35,4 +35,5 @@ jobs:
             registry-password: ${{ secrets.REGISTRY_PASSWORD }}
             name: sample-app-aci
             location: 'brazil south'
-            ports: | 8080:8080
+            ports: | 
+                8080:8080
