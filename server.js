@@ -1,6 +1,6 @@
 const http = require('http').createServer();
 const io = require('socket.io')(http, {
-    cors: { origin: "*" }
+    cors: { origin: "*", methods: ["GET", "POST"], allowedHeaders: ["my-custom-header"], credentials: true }
 });
 let forbiddenWordsDict = {};
 let selectedWord;
@@ -179,4 +179,4 @@ io.on('connection', (socket) => {
 });
 
 // Iniciar el servidor de sockets en el puerto 8080
-http.listen(8080, () => console.log('listening on http://localhost:8080'));
+http.listen(80, () => console.log('listening on http://localhost:80'));
